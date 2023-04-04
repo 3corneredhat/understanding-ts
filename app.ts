@@ -12,6 +12,7 @@ const person = {
   name: "Alan",
   age: 30,
   hobbies: ["Sports", "Cooking"],
+  role: [2, "author"], //tuple
 };
 
 let favoriteActivities: string[];
