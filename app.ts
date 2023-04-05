@@ -11,7 +11,7 @@ function add(n1: number, n2: number) {
 
 // The return type in this function is void.
 // It can be declared explicitly.
-function printResult(num: number) {
+function printResult(num: number): void {
   console.log("Result: " + num);
 }
 
@@ -24,3 +24,18 @@ function printResult(num: number) {
 // }
 
 printResult(add(5, 12));
+
+// A variable can also be declared as a
+// Function type.
+//
+// let combineValues: () => number;
+let combineValues: (a: number, b: number) => number;
+
+combineValues = add;
+
+// The following assignment gives us a compiler error
+// because the assigned function needs to meet the criteria
+// above:
+// combineValues = printResult;
+
+console.log(combineValues(8, 8));
