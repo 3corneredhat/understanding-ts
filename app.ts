@@ -13,14 +13,14 @@
 //   return result;
 // }
 
+// Type Aliases/Custom Types can be used as a short hand for Union types
+type Combinable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
 function combine(
-  input1: number | string,
-  input2: number | string,
-  // The following indicates 'literals' where
-  // the specific core type is string but is
-  // specifically one of two specific strings:
-  // "as-number" | "as-text"
-  resultConversion: "as-number" | "as-text"
+  input1: Combinable,
+  input2: Combinable,
+  resultConversion: ConversionDescriptor
 ) {
   let result;
   if (
