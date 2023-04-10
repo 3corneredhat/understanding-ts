@@ -23,6 +23,13 @@ function printResult(num: number): void {
 //   return;
 // }
 
+// Callback functions are similar to js only
+// now parameters are enforced.
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+  const result = n1 + n2;
+  cb(result);
+}
+
 printResult(add(5, 12));
 
 // A variable can also be declared as a
@@ -39,3 +46,7 @@ combineValues = add;
 // combineValues = printResult;
 
 console.log(combineValues(8, 8));
+
+addAndHandle(10, 20, (result) => {
+  console.log(result);
+});
