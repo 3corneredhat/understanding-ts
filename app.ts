@@ -17,3 +17,13 @@ userInput = "Max";
 if (typeof userInput === "string") {
   userName = userInput;
 }
+
+// void is implied but never is more
+// precise because when this code is
+// executes the script crashes and
+// triggers this error.
+function generateError(message: string, code: number): never {
+  //   throw { message: message, errorCode: code };
+}
+
+generateError("An error occurred!", 500);
