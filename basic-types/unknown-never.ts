@@ -23,7 +23,7 @@ if (typeof userInput === "string") {
 // executes the script crashes and
 // triggers this error.
 function generateError(message: string, code: number): never {
-  //   throw { message: message, errorCode: code };
+  throw { message: message, errorCode: code };
 }
 
 generateError("An error occurred!", 500);
